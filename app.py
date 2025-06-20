@@ -7,6 +7,10 @@ app = Flask(__name__)
 def hello():
     return 'Hello! This Flask app is running on IPv4!'
 
+@app.route('/about')
+def hello():
+    return 'Hello! about!'
+
 if __name__ == '__main__':
     # Bind to all IPv4 addresses (0.0.0.0), port 5000
        serve(app, host='0.0.0.0', port=8000)
